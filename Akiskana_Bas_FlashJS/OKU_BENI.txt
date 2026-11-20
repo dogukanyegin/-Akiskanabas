@@ -1,0 +1,28 @@
+AKIŞKAN’A BAS! — FLASH TARZI JAVASCRIPT HİCİV OYUNU
+
+KURULUM
+ZIP içindeki Akiskana_Bas_FlashJS klasörünü çıkartın.
+index.html dosyasını Chrome, Edge veya Firefox tarayıcısında açın.
+Alternatif olarak ZIP içindeki Akiskana_Bas_FlashJS_Tek_Dosya.html dosyasını doğrudan açabilirsiniz.
+
+KONTROLLER
+BOŞLUK veya F: Yumruk animasyonu
+Fare / dokunmatik ekran: Yumruk animasyonu
+ESC: Menü
+M: Müzik aç/kapat
+Menüden sonsuz, 30 saniye veya 60 saniye modlarından birini seçebilirsiniz.
+
+ÖZELLİKLER
+- JavaScript requestAnimationFrame ile hareketli Canvas oyunu.
+- Yumruk, sarsılma, ışık, parçacık ve puan animasyonları.
+- Tarayıcıda Web Audio API ile üretilen sesler ve isteğe bağlı müzik.
+- Puan, seri, zaman modu ve yerel kayıt.
+- Menüde farklı görsel seçme seçeneği.
+- Çevrimdışı çalışır; haricî sunucuya görsel göndermez.
+
+GÖRSEL
+Bu sürümde kullanıcı tarafından gönderilen 20.11.2026 tarihli YouTube ekran görüntüsünden
+kırpılmış görüntü kullanılır. Kişinin kimliği ekran görüntüsünden doğrulanmamıştır.
+
+TEKNOLOJİ
+HTML5, CSS3, saf JavaScript ve Web Audio API. Adobe Flash veya eklenti gerekmez.

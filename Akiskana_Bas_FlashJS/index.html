@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111b24">
+<title>Akışkan’a Bas! — Flash tarzı JS yumruk oyunu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-window" id="app">
+  <div class="title-bar"><span class="title-icon">✊</span><span>Akışkan’a Bas! <small>— Flash tarzı JavaScript hiciv oyunu</small></span><div class="window-glyph" aria-hidden="true">− &nbsp; □ &nbsp; ×</div></div>
+  <main class="game" id="game" aria-label="Akışkan’a Bas oyunu">
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <button id="hit-area" aria-label="Yumruk atmak için hedefe tıkla" title="Hedefe tıkla"></button>
+    <button class="menu-trigger" id="menu-trigger" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <div class="stats" aria-live="polite">
+      <div class="stat"><span>Vuruş:</span> <strong id="hits">0</strong></div>
+      <div class="stat coin-stat"><span class="coin-badge">Ⅱ</span><strong id="coins">0</strong></div>
+      <div class="combo" id="combo" aria-live="off">SERI x1</div>
+    </div>
+    <div class="bottom-ui">
+      <div class="time-block" id="time-block">SONSUZ MOD <span id="timer">∞</span></div>
+      <div class="big-button-wrap"><div class="hand-decoration" aria-hidden="true">✊</div><button id="punch-button" class="punch-button" aria-label="Yumruk at"></button><span class="button-text">YUMRUK AT!</span></div>
+      <button id="sound-button" class="sound-button" aria-label="Sesi kapat" title="Ses aç/kapat">🔊</button>
+    </div>
+    <p class="shortcut">BOŞLUK / F: YUMRUK &nbsp;·&nbsp; ESC: MENÜ &nbsp;·&nbsp; M: MÜZİK</p>
+    <div class="shade" id="shade" hidden></div>
+    <aside id="menu" class="menu" hidden aria-label="Oyun menüsü">
+      <div class="menu-top"><h2>OYUN MENÜSÜ</h2><button id="close-menu" class="x" aria-label="Menüyü kapat">×</button></div>
+      <p>Flash oyunlarının görünümü; Canvas üzerinden gerçek zamanlı JavaScript animasyonu.</p>
+      <h3>OYUN MODU</h3><div class="choices" id="mode-choices"><button class="active" data-mode="0">Sonsuz</button><button data-mode="30">30 sn</button><button data-mode="60">60 sn</button></div>
+      <h3>ANİMASYON</h3><div class="choices" id="effects-choices"><button class="active" data-motion="full">Tam</button><button data-motion="lite">Hafif</button></div>
+      <h3>SES / MÜZİK</h3><div class="choices"><button id="menu-sound">Ses: Açık</button><button id="menu-music">Müzik: Kapalı</button></div>
+      <h3>GÖRSEL</h3><label class="file-upload">Resim seç<input id="photo-file" type="file" accept="image/*"></label>
+      <p class="source">Varsayılan görsel, sağladığınız ekran görüntüsünden hazırlanmıştır. İnternet gerekmez. Dilerseniz kendi görselinizi seçebilirsiniz.</p>
+      <button class="wide primary" id="resume">OYUNA DÖN</button><button class="wide secondary" id="restart">YENİ OYUN</button>
+      <p class="source">Her vuruş +10, beşli seride +50 bonus. Rekor tarayıcıda saklanır.</p>
+    </aside>
+    <div class="end-overlay" id="end-overlay" hidden><h2>SÜRE BİTTİ</h2><p id="end-result">0 VURUŞ</p><button id="play-again">TEKRAR OYNA</button></div>
+    <div id="photo-status" class="photo-status">GÖRSEL YÜKLENİYOR...</div>
+  </main>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
